@@ -245,7 +245,7 @@ jobs:
       - name: Run benchmark
         if: ${{ matrix.run-bench }}
         run: |
-          src/bench/bench_lightyears > ${{ matrix.name }}-bench.csv
+          src/bench/bench_bitcoin > ${{ matrix.name }}-bench.csv
           cat ${{ matrix.name }}-bench.csv
 
       - name: Run tests
@@ -268,6 +268,6 @@ jobs:
         with:
           name: lightyears-${{ github.sha }}-${{ matrix.name }}
           path: |
-            depends/${{ matrix.host }}/bin/dogecoin*
+            depends/${{ matrix.host }}/bin/lightyears*
             dist/Lightyears-Qt.app
             ${{ matrix.name }}-bench.csv
