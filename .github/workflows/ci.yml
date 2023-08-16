@@ -141,7 +141,7 @@ jobs:
             goal: deploy
             sdk: 10.11
             sdk-shasum: "bec9d089ebf2e2dd59b1a811a38ec78ebd5da18cbbcd6ab39d1e59f64ac5033f"
-         
+
     runs-on: ${{ matrix.os }}
 
     steps:
