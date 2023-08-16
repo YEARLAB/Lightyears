@@ -141,16 +141,7 @@ jobs:
             goal: deploy
             sdk: 10.11
             sdk-shasum: "bec9d089ebf2e2dd59b1a811a38ec78ebd5da18cbbcd6ab39d1e59f64ac5033f"
-          - name: x86_64-linux-experimental
-            host: x86_64-unknown-linux-gnu
-            os: ubuntu-18.04
-            packages: bc python3-zmq
-            run-bench: true
-            run-tests: true
-            dep-opts: "AVX2=1"
-            config-opts: "--with-intel-avx2 --enable-gui=qt5 --enable-zmq --enable-glibc-back-compat --enable-reduce-exports"
-            goal: install
-
+         
     runs-on: ${{ matrix.os }}
 
     steps:
